@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: ; */
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(4,41,50,1) 19%, rgba(12,61,52,1) 45%, rgba(15,61,58,1) 70%);
+}
+.bucket_list{
+    width: 100%;
+    max-width: 540px;
+    background: #cfe7f0;
+    margin: 150px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0 0 30px #afafaf;
+}
+h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.bucket_list h2 img{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    margin-left: 20px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #cfe7f0;
+    outline: 3px groove #000;
+    outline-offset: 5px;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    box-shadow: 0 0 10px #5d5d5d;
+}
+
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+.row input::placeholder{
+    color: #063451;
+    opacity: 0.8;
+}
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: #669bbc;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 1px;
+}
+.row button:hover{
+    box-shadow: 4px 4px 6px #0f293a;
+
+}
+ul li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-block: 10px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url();
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li:checked{
+    background: #3700a4;
+    color: #fff;
+    border-radius: 50px;
+}
+ul li:checked::before{
+    background: url();
+    background-size: cover;
+}
+ul li span{
+    position: absolute;
+    top: 10px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li:checked span{
+    color: #ffffff;
+}
+ul.li:checked span:hover{
+    background: #fff;
+    color: #000;
+}
+ul li span:hover{
+    background: #000;
+    color: #fff;
+}
+
+
+/* ----- */
+nav{
+    border-radius: 1px;
+    box-shadow: 2px 2px 17px #03045e;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(13, 78, 66);
+    position: relative;
+    height: 70px;
+}
+nav:hover{
+    box-shadow: 6px 6px 25px #03045e;
+}
+ul button:hover{
+    box-shadow: 4px 6px 20px black;
+}
+
+.logo{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul button{
+    border-radius: 18px;
+    list-style-type: none;
+    width: 60px;
+    height: 50px;
+}
+
+nav ul button a{
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #04183b;
+    font-size: 30px;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul button{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+}
